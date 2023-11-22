@@ -1,0 +1,63 @@
+[gd_scene load_steps=8 format=3 uid="uid://gr7gbvfvlqvd"]
+
+[ext_resource type="Texture2D" uid="uid://cpgjbhviqqqfl" path="res://sky/sky 2.jpg" id="1_4fobr"]
+[ext_resource type="Resource" uid="uid://6aqel3qohiiy" path="res://PapaMovementData.tres" id="1_llo32"]
+[ext_resource type="PackedScene" uid="uid://b7pgi0inhd0ep" path="res://player.tscn" id="2_4p1hx"]
+[ext_resource type="Texture2D" uid="uid://bi4yv68vs722r" path="res://levels/grassy 1.png" id="3_pspd0"]
+[ext_resource type="PackedScene" uid="uid://gjdectqyg27t" path="res://platform.tscn" id="4_yny60"]
+[ext_resource type="PackedScene" uid="uid://cswqn0tirsu27" path="res://hearts_container.tscn" id="7_p6tac"]
+
+[sub_resource type="GDScript" id="GDScript_nkv2e"]
+script/source = "extends Node2D
+
+@export var movement_data : PlayerMovementData
+@onready var heartsContainer = $CanvasLayer/HeartsContainer
+@onready var player = $Player
+
+func _ready():
+	heartsContainer.setMaxHearts(movement_data.maxHealth)
+	heartsContainer.updateHearts(player.currenthealth)
+	player.healthChanged.connect(heartsContainer.updateHearts)
+	
+"
+
+[node name="World" type="Node2D"]
+script = SubResource("GDScript_nkv2e")
+movement_data = ExtResource("1_llo32")
+
+[node name="Sky2" type="Sprite2D" parent="."]
+position = Vector2(153.687, 84)
+scale = Vector2(0.289157, 0.289157)
+texture = ExtResource("1_4fobr")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(-1, 23)
+polygon = PackedVector2Array(-2, 140, 193, 141, 265, 117, 349, 118, 323, 165, -4, 165)
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D/CollisionPolygon2D"]
+color = Color(0, 0.737255, 0, 1)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-39, -1, -1, 0, -1, 178, 351, 178, 350, 0, 372, 0, 364, 197, -40, 201)
+
+[node name="Player" parent="." instance=ExtResource("2_4p1hx")]
+position = Vector2(20, 159)
+
+[node name="Grassy1" type="Sprite2D" parent="."]
+position = Vector2(160, 107)
+scale = Vector2(0.172222, 0.172222)
+texture = ExtResource("3_pspd0")
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("4_yny60")]
+position = Vector2(-1, -13)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HeartsContainer" parent="CanvasLayer" instance=ExtResource("7_p6tac")]
+offset_left = 4.0
+offset_top = 3.0
+offset_right = 55.0
+offset_bottom = 42.0
+metadata/_edit_use_anchors_ = true
