@@ -350,6 +350,8 @@ position = Vector2(1.75, -20.75)
 scale = Vector2(0.363281, 0.363281)
 sprite_frames = SubResource("SpriteFrames_6qn4t")
 animation = &"Death"
+frame = 11
+frame_progress = 0.119053
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
 position = Vector2(2, -16.5)
