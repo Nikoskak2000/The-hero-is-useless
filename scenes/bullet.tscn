@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1lx681h3ut01"]
+
+[ext_resource type="Texture2D" uid="uid://dvy3ppi52wjli" path="res://sprites/projectiles/Bullet.png" id="1_1tcwo"]
+
+[sub_resource type="GDScript" id="GDScript_blesu"]
+script/source = "extends Area2D
+
+@export var speed = 800
+
+func _ready():
+	set_as_top_level(true)
+
+func _process(delta):
+	position += (Vector2.RIGHT*speed).rotated(rotation) * delta
+	Vector2(1,0)
+
+#animated bullets
+#func _physics_process(delta):
+	#await (get_tree().create_timer(0.01))
+	#set_physics_process(false)
+
+func _on_visible_on_screen_notifier_2d_screen_exited():
+	queue_free()
+	
+
+func _on_body_entered(body):
+	queue_free()
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gpki1"]
+size = Vector2(5, 5)
+
+[node name="Bullet" type="Area2D"]
+script = SubResource("GDScript_blesu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-5.96046e-08, -2)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("1_1tcwo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -2.5)
+shape = SubResource("RectangleShape2D_gpki1")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(1.19209e-07, -2)
+scale = Vector2(0.35, 0.35)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
