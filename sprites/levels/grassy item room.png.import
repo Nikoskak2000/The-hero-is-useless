@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvy3ppi52wjli"
-path="res://.godot/imported/Bullet.png-8556c7b1165e553b17f4d76e597a3ac5.ctex"
+uid="uid://hldi822b6hg4"
+path="res://.godot/imported/grassy item room.png-3482bdc7cad8d77b329b84816f4f8e29.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Bullet.png"
-dest_files=["res://.godot/imported/Bullet.png-8556c7b1165e553b17f4d76e597a3ac5.ctex"]
+source_file="res://sprites/levels/grassy item room.png"
+dest_files=["res://.godot/imported/grassy item room.png-3482bdc7cad8d77b329b84816f4f8e29.ctex"]
 
 [params]
 

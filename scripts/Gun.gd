@@ -2,7 +2,6 @@ extends Sprite2D
 
 var can_fire = true
 
-#var bullet = preload("res://sprites/projectiles/Bullet.png")
 var bullet = preload("res://scenes/bullet.tscn")
 
 func _ready():
