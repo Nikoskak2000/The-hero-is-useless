@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://dd6awjlep3kkb"]
 
-[ext_resource type="Resource" uid="uid://6aqel3qohiiy" path="res://scripts/PapaMovementData.tres" id="1_8ko6s"]
+[ext_resource type="Resource" uid="uid://6aqel3qohiiy" path="res://scripts/data/PapaMovementData.tres" id="1_8ko6s"]
 [ext_resource type="Script" path="res://scripts/grassy.gd" id="1_gdfva"]
 [ext_resource type="Texture2D" uid="uid://cpgjbhviqqqfl" path="res://sprites/sky/sky 2.jpg" id="1_vqdl7"]
 [ext_resource type="PackedScene" uid="uid://b7pgi0inhd0ep" path="res://scenes/player.tscn" id="2_832c8"]

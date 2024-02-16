@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://bm68qgwsfmfxg"]
 
 [ext_resource type="Script" path="res://scripts/grassy.gd" id="1_6mu4w"]
-[ext_resource type="Resource" uid="uid://6aqel3qohiiy" path="res://scripts/PapaMovementData.tres" id="1_iqme2"]
+[ext_resource type="Resource" uid="uid://6aqel3qohiiy" path="res://scripts/data/PapaMovementData.tres" id="1_iqme2"]
 [ext_resource type="Texture2D" uid="uid://cpgjbhviqqqfl" path="res://sprites/sky/sky 2.jpg" id="2_4lu6f"]
 [ext_resource type="PackedScene" uid="uid://b7pgi0inhd0ep" path="res://scenes/player.tscn" id="3_lsn88"]
 [ext_resource type="Texture2D" uid="uid://bup2yr3w675x5" path="res://sprites/levels/grassy 3.png" id="4_6rm04"]
