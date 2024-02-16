@@ -1,7 +1,7 @@
 [gd_scene load_steps=55 format=3 uid="uid://b7pgi0inhd0ep"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_fikef"]
-[ext_resource type="Resource" uid="uid://6aqel3qohiiy" path="res://scripts/PapaMovementData.tres" id="2_4e58l"]
+[ext_resource type="Resource" uid="uid://6aqel3qohiiy" path="res://scripts/data/PapaMovementData.tres" id="2_4e58l"]
 [ext_resource type="Texture2D" uid="uid://b4slep4nosvd6" path="res://sprites/papa/papa jump.png" id="3_4d064"]
 [ext_resource type="Texture2D" uid="uid://bn4xg8xinux10" path="res://sprites/papa/papa death animation new.png" id="3_bhgjf"]
 [ext_resource type="Texture2D" uid="uid://64q32j4e5wy7" path="res://sprites/papa/papa idle.png" id="3_i57fr"]
