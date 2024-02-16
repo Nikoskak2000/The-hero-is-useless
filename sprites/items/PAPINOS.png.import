@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyx2t7jhf5bk0"
-path="res://.godot/imported/grassy platform.png-9e1d845cd1e936098b382995b6a6713e.ctex"
+uid="uid://bd2ww4j2ew5d8"
+path="res://.godot/imported/PAPINOS.png-a88570cf2b967b9ccc6589f0c7f0d281.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://grassy platform.png"
-dest_files=["res://.godot/imported/grassy platform.png-9e1d845cd1e936098b382995b6a6713e.ctex"]
+source_file="res://sprites/items/PAPINOS.png"
+dest_files=["res://.godot/imported/PAPINOS.png-a88570cf2b967b9ccc6589f0c7f0d281.ctex"]
 
 [params]
 

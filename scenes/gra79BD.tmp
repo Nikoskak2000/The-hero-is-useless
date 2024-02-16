@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://gr7gbvfvlqvd"]
 
-[ext_resource type="Texture2D" uid="uid://cpgjbhviqqqfl" path="res://sky/sky 2.jpg" id="1_4fobr"]
-[ext_resource type="Resource" uid="uid://6aqel3qohiiy" path="res://PapaMovementData.tres" id="1_llo32"]
-[ext_resource type="PackedScene" uid="uid://b7pgi0inhd0ep" path="res://player.tscn" id="2_4p1hx"]
-[ext_resource type="Texture2D" uid="uid://bi4yv68vs722r" path="res://levels/grassy 1.png" id="3_pspd0"]
-[ext_resource type="PackedScene" uid="uid://gjdectqyg27t" path="res://platform.tscn" id="4_yny60"]
-[ext_resource type="PackedScene" uid="uid://cswqn0tirsu27" path="res://hearts_container.tscn" id="7_p6tac"]
+[ext_resource type="Texture2D" uid="uid://cpgjbhviqqqfl" path="res://sprites/sky/sky 2.jpg" id="1_4fobr"]
+[ext_resource type="Resource" uid="uid://6aqel3qohiiy" path="res://scripts/PapaMovementData.tres" id="1_llo32"]
+[ext_resource type="PackedScene" uid="uid://b7pgi0inhd0ep" path="res://scenes/player.tscn" id="2_4p1hx"]
+[ext_resource type="Texture2D" uid="uid://bi4yv68vs722r" path="res://sprites/levels/grassy 1.png" id="3_pspd0"]
+[ext_resource type="PackedScene" uid="uid://gjdectqyg27t" path="res://scenes/platform.tscn" id="4_yny60"]
+[ext_resource type="PackedScene" uid="uid://cswqn0tirsu27" path="res://scenes/hearts_container.tscn" id="7_p6tac"]
 
 [sub_resource type="GDScript" id="GDScript_nkv2e"]
 script/source = "extends Node2D
@@ -20,7 +20,7 @@ func _ready():
 	heartsContainer.setMaxHearts(movement_data.maxHealth)
 	heartsContainer.updateHearts(player.currenthealth)
 	player.healthChanged.connect(heartsContainer.updateHearts)
-	var cursor_texture = preload(\"res://hud/mouse cursor.png\")
+	var cursor_texture = preload(\"res://sprites/hud/mouse cursor.png\")
 	Input.set_custom_mouse_cursor(cursor_texture, Input.CURSOR_ARROW)
 
 func hideOtherElementsExceptPlayer():

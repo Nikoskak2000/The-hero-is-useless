@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://gjdectqyg27t"]
 
-[ext_resource type="Texture2D" uid="uid://dyx2t7jhf5bk0" path="res://grassy platform.png" id="1_shtyw"]
+[ext_resource type="Texture2D" uid="uid://dyx2t7jhf5bk0" path="res://sprites/grassy platform.png" id="1_shtyw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s8hd2"]
 size = Vector2(69, 3)
