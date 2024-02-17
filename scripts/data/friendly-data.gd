@@ -4,4 +4,4 @@ extends Resource
 @export var normal_movement_speed: float = 100
 @export var accelerated_movement_speed: float = 150
 @export var decelerated_movement_speed: float = 50
-var accel: float = 5050
+@export var acceletation: float = 1000
