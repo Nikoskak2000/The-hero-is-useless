@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="EnemyMovementData" load_steps=2 format=3 uid="uid://g4xqm1m5hhkw"]
+[gd_resource type="Resource" script_class="EnemyMovementData" load_steps=2 format=3 uid="uid://desyrhkmluee1"]
 
 [ext_resource type="Script" path="res://scripts/data/enemy_data.gd" id="1_e18dg"]
 
